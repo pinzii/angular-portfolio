@@ -1,6 +1,21 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter([
+      {
+        path: '',
+        loadComponent: () =>
+          import('./app/home/home.component').then((m) => m.HomeComponent)
+      },
+      {
+        path: 'about',
+        loadComponent: () =>
+          import('./app/about/about.component').then((m) => m.AboutComponent)
+      }
+      // Agrega más rutas según lo necesites
+    ])
+  ]
+}).catch((err) => console.error(err));
