@@ -1,7 +1,11 @@
-<h2>Mis proyectos</h2>
+<h2>Mis Proyectos</h2>
 <ul>
-    <li *ngFor="let project of projects">
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-    </li>
+  <li *ngFor="let project of projects">
+    <!-- Se pasa cada proyecto al componente hijo y se escucha el evento -->
+    <app-project-item 
+      [project]="project" 
+      (projectSelected)="onProjectSelected($event)">
+    </app-project-item>
+  </li>
 </ul>
+

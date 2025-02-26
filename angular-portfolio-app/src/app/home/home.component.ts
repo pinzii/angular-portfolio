@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectService } from '../project.service';
+import { ProjectItemComponent } from '../project-item/project-item.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule], //usar directivas *ngFor, *ngIf, *ngSwitch etc
+  imports: [CommonModule, ProjectItemComponent], //usar directivas *ngFor, *ngIf, *ngSwitch etc
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -15,6 +16,10 @@ export class HomeComponent implements OnInit {
   constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
-    this.projects = this.projectService.getProjects();
+    this.projects = this.projectService.getProjects();   
+  }
+
+  onProjectSelected(project: any): void{
+    console.log('proyecto seleccionado', project);
   }
 }
