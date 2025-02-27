@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ProjectService } from '../project.service';
 import { ProjectItemComponent } from '../project-item/project-item.component';
 import { ProjectFormComponent } from '../project-form/project-form.component';
+import { PostsComponent } from '../posts/posts.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ProjectItemComponent, ProjectFormComponent], //usar directivas *ngFor, *ngIf, *ngSwitch etc
+  imports: [CommonModule, ProjectItemComponent, ProjectFormComponent, PostsComponent], //usar directivas *ngFor, *ngIf, *ngSwitch etc
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
