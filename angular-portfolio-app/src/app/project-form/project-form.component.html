@@ -1,0 +1,23 @@
+<h2>Registrar Proyecto</h2>
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nombre del Proyecto:</label>
+    <input id="name" type="text" formControlName="name" />
+    <div *ngIf="projectForm.get('name')?.invalid && projectForm.get('name')?.touched">
+      <small *ngIf="projectForm.get('name')?.errors?.['required']">El nombre es obligatorio.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="description">Descripción:</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <div *ngIf="projectForm.get('description')?.invalid && projectForm.get('description')?.touched">
+      <small *ngIf="projectForm.get('description')?.errors?.['required']">La descripción es obligatoria.</small>
+      <small *ngIf="projectForm.get('description')?.errors?.['minlength']">
+        La descripción debe tener al menos 10 caracteres.
+      </small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="projectForm.invalid">Enviar</button>
+</form>
