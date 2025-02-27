@@ -14,3 +14,14 @@
 - [x] **Creación del proyecto Angular:** Proyecto generado con componentes standalone.
 - [x] **Desarrollo del componente header:** Componente header creado e integrado.
 - [x] **Desarrollo del componente footer:** Pendiente.
+
+## Dia 2025-02-25
+
+[x] **Implementación del Servicio ProjectService:**  
+ Servicio creado para proporcionar una lista de proyectos.
+
+- [x] **Creación e Integración del Componente ProjectItem:**  
+      Componente creado para mostrar cada proyecto y gestionar la comunicación (usando @Input y @Output).
+
+- [x] **Verificar Evento de Selección de Proyecto:**  
+      Asegurarse de que al hacer clic en un proyecto se emita el evento `projectSelected` y se muestre el mensaje en consola.
