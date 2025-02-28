@@ -1,11 +1,11 @@
 <p>{{ 'Angular' | custom:'Bienvenido a' |uppercase }}</p>
 
-<h2 >Mis Proyectos</h2>
-<app-project-form></app-project-form>
+<h2 appFancy="green">Mis Proyectos</h2>
+<app-project-form ></app-project-form>
 
 
-<ul appHighlight="lightblue">
-  <h2 appHighlight="lightblue">Bienvenido a mi portafolio</h2>
+<ul appHighlight="#808080">
+  <h2>Bienvenido a mi portafolio</h2>
   <li *ngFor="let project of projects">
     <!-- Se pasa cada proyecto al componente hijo y se escucha el evento -->
     <app-project-item 

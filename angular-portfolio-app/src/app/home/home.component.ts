@@ -6,11 +6,12 @@ import { ProjectFormComponent } from '../project-form/project-form.component';
 import { PostsComponent } from '../posts/posts.component';
 import { CustomPipe } from '../custom.pipe';
 import { HighlightDirective } from '../highlight.directive';
+import { FancyDirective } from '../fancy.directive';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ProjectItemComponent, ProjectFormComponent, PostsComponent, CustomPipe, HighlightDirective], //usar directivas *ngFor, *ngIf, *ngSwitch etc
+  imports: [CommonModule, ProjectItemComponent, ProjectFormComponent, PostsComponent, CustomPipe, HighlightDirective, FancyDirective], //usar directivas *ngFor, *ngIf, *ngSwitch etc
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
