@@ -41,3 +41,28 @@
 
 - [x] **Verificar Funcionalidad Completa:**
   - Confirmar que los eventos (por ejemplo, selección de proyecto) y validaciones del formulario se disparen correctamente.
+
+## Día 2025-03-11
+
+✔ [x] Convertir AuthInterceptor de clase a función (HttpInterceptorFn).
+✔ [x] Agregar Authorization: Bearer <token> a todas las solicitudes HTTP.
+✔ [x] Registrar el interceptor en main.ts con withInterceptors([authInterceptor]).
+✔ [x] Confirmar en la pestaña Red (Network) que la cabecera Authorization se agrega correctamente.
+
+2. Implementación de errorInterceptor (Manejo global de errores)
+   ✔ [x] Convertir ErrorInterceptor de clase a función (HttpInterceptorFn).
+   ✔ [x] Registrar el interceptor en main.ts con withInterceptors([errorInterceptor]).
+   ✔ [x] Manejar errores 401, 404 y 500 con mensajes personalizados.
+   ✔ [x] Probar la funcionalidad con una URL incorrecta en data.service.ts.
+   ✔ [x] Confirmar que las alertas de error aparecen correctamente.
+
+3. Verificación del funcionamiento de los interceptores
+   ✔ [x] Agregar console.log() en los interceptores para revisar el flujo de ejecución.
+   ✔ [x] Confirmar en la consola (F12 → Console) que las solicitudes pasan por authInterceptor.
+   ✔ [x] Confirmar que los errores son interceptados correctamente por errorInterceptor.
+
+4. Confirmación del código y control de versiones
+   ✔ [x] Realizar git add . para agregar los cambios.
+   ✔ [x] Realizar git commit -m "Implementación de interceptores HTTP en Angular: authInterceptor y errorInterceptor".
+   ✔ [x] Subir cambios con git push origin feature/interceptors.
+   ✔ [x] (Opcional) Crear un Pull Request en GitHub/GitLab/Bitbucket.
