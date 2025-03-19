@@ -66,3 +66,16 @@
    ✔ [x] Realizar git commit -m "Implementación de interceptores HTTP en Angular: authInterceptor y errorInterceptor".
    ✔ [x] Subir cambios con git push origin feature/interceptors.
    ✔ [x] (Opcional) Crear un Pull Request en GitHub/GitLab/Bitbucket.
+
+## Día 2025-03-19
+
+✔ [x] Configurar json-server como backend falso.
+✔ [x] Crear db.json con usuarios de prueba.
+✔ [x] Implementar AuthService para manejar login/logout.
+✔ [x] Usar Local Storage para guardar el token.
+✔ [x] Proteger rutas con authGuard.
+✔ [x] Probar el flujo completo de login/logout.
+✔ [x] Verificar almacenamiento del token en Local Storage.
+✔ [x] Bloquear rutas protegidas si el usuario no está autenticado.
+✔ [x] Realizar git commit -m "Implementación de autenticación con json-server, login y almacenamiento de token".
+✔ [x] Subir cambios con git push origin main.
