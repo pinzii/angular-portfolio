@@ -2,9 +2,9 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { authInterceptor } from './app/interceptors/auth.service';
+import { authInterceptor } from './app/interceptors/auth.interceptor';
 import { errorInterceptor } from './app/interceptors/error.interceptor';
-
+import { authGuard } from './app/services/auth.guard';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -21,6 +21,17 @@ bootstrapApplication(AppComponent, {
         path: 'about',
         loadComponent: () =>
           import('./app/about/about.component').then((m) => m.AboutComponent)
+      },
+      {
+        path: 'dashboard', // 🔥 Ruta protegida
+        loadComponent: () =>
+          import('./app/dashboard/dashboard.component').then((m) => m.DashboardComponent),
+        canActivate: [authGuard] // ✅ Aplica el guard aquí
+      },
+      {
+        path: 'login',
+        loadComponent: () =>
+          import('./app/login/login.component').then((m) => m.LoginComponent)
       }
       // Agrega más rutas según lo necesites
     ])
