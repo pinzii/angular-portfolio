@@ -11,6 +11,12 @@
       "email": "nuevo@ejemplo.com",
       "password": "3210",
       "token": "fake-jwt-token"
+    },
+    {
+      "id": "6f52",
+      "email": "felipe@ej.com",
+      "password": "1234",
+      "token": "fake-jwt-token"
     }
   ]
 }
