@@ -79,3 +79,21 @@
 ✔ [x] Bloquear rutas protegidas si el usuario no está autenticado.
 ✔ [x] Realizar git commit -m "Implementación de autenticación con json-server, login y almacenamiento de token".
 ✔ [x] Subir cambios con git push origin main.
+
+## Día 2025-03-22
+
+✔ [x] Implementar formulario de registro de usuarios con validación.  
+✔ [x] Conectar el registro con json-server (endpoint `/users`).  
+✔ [x] Guardar token falso al registrarse y redirigir al dashboard.  
+✔ [x] Mostrar dashboard personalizado tras login o registro.  
+✔ [x] Proteger dashboard con authGuard.  
+✔ [x] Validación completa de formularios login y registro con NgModel.  
+✔ [x] Inputs centrados con feedback visual (bordes verde/rojo según validez).  
+✔ [x] Rediseño visual con estilo glassmorphism y fondo degradado.  
+✔ [x] Botones con gradiente moderno y efecto hover.  
+✔ [x] Corrección del patrón de validación para aceptar emails válidos.  
+✔ [x] Unificación de estilos entre login y registro.  
+✔ [x] Mejora de experiencia visual (centrado vertical, diseño limpio).  
+✔ [x] Confirmar funcionamiento visual y validaciones en ambos formularios.  
+✔ [x] Realizar git commit -m "Rediseño completo de formularios de login y registro con validaciones y estilo moderno".  
+✔ [x] Subir cambios con git push origin main.
