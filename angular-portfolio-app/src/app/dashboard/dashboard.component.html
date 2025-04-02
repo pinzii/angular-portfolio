@@ -1,16 +1,22 @@
-<div class="dashboard-container">
+<div class="dashboard">
+  <h1>Bienvenido 👋 {{user.email}}</h1>
 
-    <h2>Bienvenido al Dashboard</h2>
-
-    <div *ngIf="user; else errorTpl">
-      <p><strong>Email:</strong> {{ user.email }}</p>
-      <p><strong>ID:</strong> {{ user.id }}</p>
+  <div class="info-cards">
+    <div class="card">
+      <h2>Tareas</h2>
+      <p>3 tareas pendientes</p>
     </div>
 
-    <button (click)="logout()">Cerrar Sesión</button>
+    <div class="card">
+      <h2>Mensajes</h2>
+      <p>2 nuevos mensajes</p>
+    </div>
 
+    <div class="card">
+      <h2>Notificaciones</h2>
+      <p>1 notificación importante</p>
+    </div>
+  </div>
+
+  <button (click)="logout()">Cerrar sesión</button>
 </div>
-
-<ng-template #errorTpl>
-  <p style="color: red;">{{ error }}</p>
-</ng-template>
